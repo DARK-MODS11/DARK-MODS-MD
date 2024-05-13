@@ -72,22 +72,20 @@ command(
   {
     pattern: "mp3",
     fromMe: isPrivate,
-    desc: "converts video/audio/voice to mp3",
-    type: "converter",
+    desc: "converts video/voice to mp3",
+    type: "downloader",
   },
   async (message, match, m) => {
-    if (!message.reply_message || (!message.reply_message.video && !message.reply_message.audio)) return await message.reply('*_Reply at audio/voice/video!_*')  
     let buff = await m.quoted.download();
+    console.log(typeof buff);
     buff = await toAudio(buff, "mp3");
-     await message.sendMessage(buff,{mimetype: 'audio/mpeg', contextInfo: { externalAdReply: {
-title: "ᴅᴀʀᴋ-ᴍᴏᴅꜱ",
-body: "ᴄᴏɴᴠᴇʀᴛᴇᴅ ᴛᴏ ᴍᴩ3",
-sourceUrl: "",
-mediaUrl: "",
-mediaType: 1,
-showAdAttribution: true,
-renderLargerThumbnail: false,
-thumbnailUrl: "https://i.imgur.com/DZaQOqK.jpeg" }}, quoted: message }, "audio");
+    console.log(typeof buff);
+    return await message.sendMessage(
+      message.jid,
+      buff,
+      { mimetype: "audio/mpeg" },
+      "audio"
+    );
   }
 );
 
