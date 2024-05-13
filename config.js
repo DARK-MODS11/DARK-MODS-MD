@@ -16,7 +16,7 @@ module.exports = {
   LANG: process.env.LANG || "EN",
   HANDLERS: process.env.PREFIX || '^[.]',
   BRANCH: "master",
-  STICKER_DATA: process.env.STICKER_DATA || "Dɪyᴀʜ🧚‍♀️;nazim.x10",
+  STICKER_DATA: process.env.STICKER_DATA || "ᴅᴀʀᴋ-ᴍᴏᴅꜱ-ᴍᴅ;ᴀʙʜɪɴᴀɴᴅʜ",
   BOT_INFO: process.env.BOT_INFO || "Abhinandh;DARK-MODS-MD;https://i.imgur.com/nAkM1zV.mp4",
   AUDIO_DATA: process.env.AUDIO_DATA || "DARK-MODS-MD;Abhinandh;https://i.imgur.com/Ou56ggv.jpeg",
   ALWAYS_ONLINE: process.env.ALWAYS_ONLINE || "false",
